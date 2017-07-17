@@ -1,0 +1,10 @@
+17.07.17
+1. Timer.h
+   累计时间、delta(t)的计算与输出
+   Tips:
+   1) #pragma once
+      在头文件的最开始加入这条杂注，就能够保证头文件只被编译一次
+   2) printf vs cout
+      理论上cout快，实际上编译器的处理方式导致很多时候printf快（reference:http://blog.sina.com.cn/s/blog_93294724010163rl.html）
+   3) printf("%s",s)
+      s为char*，如果为string，用s.c_str（）
