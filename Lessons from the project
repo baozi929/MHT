@@ -18,3 +18,5 @@
        .....
        virtual int isNode() const{ return 0; }
    };
+7. dummy节点的作用
+   对于链表/双向链表，使用dummy节点，则所有节点都拥有prev节点/prev&next节点，不需要考虑头节点/头尾节点的特殊性。
