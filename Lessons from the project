@@ -1,0 +1,20 @@
+17.07.17
+1. #pragma once
+   在头文件的最开始加入这条杂注，就能够保证头文件只被编译一次
+2. printf vs cout
+   理论上cout快，实际上编译器的处理方式导致很多时候printf快（reference:http://blog.sina.com.cn/s/blog_93294724010163rl.html）
+3. printf("%s",s)
+   s为char*，如果为string，用s.c_str（）
+4. friend class
+   class A里面加friend class B;  使得B类可以访问A类里面的protected和private的成员函数或成员变量
+5. assert
+   false报错误的文件、行。如果希望其可选，可以使用#ifdef DEBUG ... #else ... #endif
+6. 虚函数的使用例
+   class A{
+       .....
+       virtual int isNode() const{ return 1; }
+   };
+   class B: public A{
+       .....
+       virtual int isNode() const{ return 0; }
+   };
