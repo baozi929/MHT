@@ -32,4 +32,20 @@
    .c文件是程序文件，内含函数实现，变量定义等内容
    目的：便于实现程序的模块化，便于阅读
          如果一个 .h 被多个 .c 包含，而且 .h 中有对象（变量或函数）的定义，就会发生重复定义的错误了（声明可以无穷多次，定义只能一次）
-2. 
+2. Template
+   1) 声明例：
+      template <class identifier> function_declaration;
+      template <typename identifier> function_declaration;
+   2) 实例
+      //method.h
+      template<typename T> void swap(T& t1, T& t2);
+      //method.cpp
+      template<typename T> void swap(T& t1, T& t2) {
+          T tmpT;
+          tmpT = t1;
+          t1 = t2;
+          t2 = tmpT;
+      }
+      具体见：http://www.cnblogs.com/ggjucheng/archive/2011/12/18/2292090.html
+   3) 作用
+      和vector<int> vector<string>...是一样的，避免重复性工作
